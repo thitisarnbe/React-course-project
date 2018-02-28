@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Option = (props) =>{
-    return( 
+const Option = (props) =>( 
         <li key={props.key}> 
             {props.optionText}
             &nbsp;<button
@@ -13,8 +12,7 @@ const Option = (props) =>{
                 Remove
             </button>
         </li>
-    );
-};
+);
 
 export default Option;
 
