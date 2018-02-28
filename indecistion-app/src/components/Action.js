@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 //Add Remove All Buttons
 const Action = (props) =>(
     <div>  
-        <button onClick={props.handlePickOptions} disabled={!props.hasOptions}>What should I do?</button>
+        <button onClick={props.handlePickOptions} disabled={!props.hasOptions} className="big-button">What should I do?</button>
     </div>
 );
 

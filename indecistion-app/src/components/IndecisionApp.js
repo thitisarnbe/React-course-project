@@ -83,18 +83,22 @@ export default class IndecisionApp extends React.Component{
         return (
             <div>
                 <Header title={title} subtitle={subtitle}/>
-                <Action 
-                    hasOptions={this.state.options.length > 0}
-                    handlePickOptions={this.handlePickOptions}
-                />
-                <Options 
-                    options={this.state.options} 
-                    handleDeleteOptions={this.handleDeleteOptions}
-                    handleDeleteOption={this.handleDeleteOption}
-                />
-                <AddOptions handleAddOption ={this.handleAddOption}/> 
-                {/* <Decistion decision_txt={this.state.decision_txt} /> */}
-                <OptionModal selectedOption={this.state.selectedOption} handleClearSelectedOptions={this.handleClearSelectedOptions}/>
+                <div className="container">
+                    <Action
+                        hasOptions={this.state.options.length > 0}
+                        handlePickOptions={this.handlePickOptions}
+                    />
+                    <div className="widget">
+                        <Options
+                            options={this.state.options}
+                            handleDeleteOptions={this.handleDeleteOptions}
+                            handleDeleteOption={this.handleDeleteOption}
+                        />
+                        <AddOptions handleAddOption ={this.handleAddOption}/>
+                   </div>
+                    {/* <Decistion decision_txt={this.state.decision_txt} /> */}
+                    <OptionModal selectedOption={this.state.selectedOption} handleClearSelectedOptions={this.handleClearSelectedOptions} closeTimeoutMS={200} />
+                </div>
             </div>
         );
     }
